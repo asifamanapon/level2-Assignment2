@@ -10,7 +10,11 @@ This project is an E-Commerce API created using Node.js, Express, and MongoDB by
 - Retrieve orders by user email
 - When creating a new order (`/api/orders`), the ordered product's `quantity` in inventory is reduced, and the `inStock` property is updated.
 - When a new order is created, the system checks the available quantity in inventory.
-- If the ordered quantity exceeds the available quantity, an error response indicating insufficient stock is r
+- If the ordered quantity exceeds the available quantity, an error response indicating insufficient stock is returned.
+- The inventory quantity and `inStock` status are updated based on the ordered quantity:
+  - If the inventory quantity reaches zero, `inStock` is set to `false`.
+  - Otherwise, `inStock` remains `true`.
+- Zod validation is implemented.
 
 ## Prerequisites
 
