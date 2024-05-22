@@ -9,7 +9,7 @@ const app = express();
 app.use([cors(), express.json()]);
 
 app.get('/', (_req, res) => {
-  res.send(`<h2>The Server is running successfully!!</h2>`);
+  res.send(`<h2>The Server is running successfully!!!!!!!!!</h2>`);
 });
 
 app.get('/health', (_req, res) => {
